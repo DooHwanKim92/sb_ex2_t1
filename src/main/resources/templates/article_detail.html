@@ -1,0 +1,16 @@
+<html layout:decorate="~{layout}">
+    <div layout:fragment="content">
+        <h3 th:text="${article.subject}"></h3>
+        <div th:text="${article.content}"></div>
+        <div style="padding-top : 20px;">
+            <a th:href="@{/article/list}" th:text="게시글목록" style="color:#fff; background-color:blue; border-radius:10px;"></a>
+        </div>
+        <div style="padding-top : 20px;">
+            <a th:href="@{|/article/modify/${article.id}|}" th:text="게시글수정" style="color:#fff; background-color:blue; border-radius:10px;"></a>
+        </div>
+        <br>
+        <form th:action="@{|/article/remove/${article.id}|}" method="post">
+            <input type="submit" value="게시글삭제" style="color:#fff; background-color:blue; border-radius:10px;">
+        </form>
+    </div>
+</html>

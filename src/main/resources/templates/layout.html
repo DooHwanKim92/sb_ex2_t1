@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article_Board</title>
+</head>
+<body>
+
+<nav style="background-color:black;">
+    <a th:href="@{/article/list}" style="color:#fff; text-decoration:none; line-height:50px; margin-left:30px">HOME</a>
+    <ul>
+        <li>
+            <a th:href="@{/user/login}" th:text="로그인" style="color:#fff; text-decoration:none;"></a>
+        </li>
+        <li>
+            <span style="color:#fff;">로그아웃</span>
+        </li>
+        <li>
+            <a th:href="@{/user/signup}" th:text="회원가입" style="color:#fff; text-decoration:none;"></a>
+        </li>
+    </ul>
+</nav>
+
+<th:block layout:fragment="content"></th:block>
+
+
+</body>
+</html>
